@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Mod08.ViewModel"
+             x:Class="Mod08.View.NavigationPage"
+             Title="NavigationPage"
+             BackgroundColor="#1E3A8A">
+    <!-- Updated background color to a deep blue (#1E3A8A) -->
+
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout 
+        Padding="20"
+        Spacing="30"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+
+        <!-- Welcome Message -->
+        <Label 
+            Text="Welcome to AlayEdu!"
+            FontSize="26"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            TextColor="#84CC16" 
+            LineBreakMode="WordWrap" />
+        <!-- Text color updated to lime (#84CC16) -->
+
+        <!-- Attendance Button -->
+        <Button 
+            Text="Attendance Page"
+            BackgroundColor="#2563EB" 
+            TextColor="#FFFFFF"
+            FontSize="18"
+            CornerRadius="20"
+            HeightRequest="50"
+            WidthRequest="250"
+            HorizontalOptions="Center"
+            Command="{Binding AttendanceCommand}" />
+
+        <!-- Manage Students Button -->
+        <Button 
+            Text="Manage Student Page"
+            BackgroundColor="#2563EB"
+            TextColor="#FFFFFF"
+            FontSize="18"
+            CornerRadius="20"
+            HeightRequest="50"
+            WidthRequest="250"
+            HorizontalOptions="Center"
+            Command="{Binding ManageStudentsCommand}" />
+
+        <!-- Payment Page Button -->
+        <Button 
+            Text="Payment Page"
+            BackgroundColor="#2563EB"
+            TextColor="#FFFFFF"
+            FontSize="18"
+            CornerRadius="20"
+            HeightRequest="50"
+            WidthRequest="250"
+            HorizontalOptions="Center"
+            Command="{Binding PaymentCommand}" />
+
+        <!-- Grades Page Button -->
+        <Button 
+            Text="Grades Page"
+            BackgroundColor="#2563EB"
+            TextColor="#FFFFFF"
+            FontSize="18"
+            CornerRadius="20"
+            HeightRequest="50"
+            WidthRequest="250"
+            HorizontalOptions="Center"
+            Command="{Binding GradeCommand}" />
+
+        <!-- Logout Button -->
+        <Button 
+            Text="Logout"
+            BackgroundColor="#2563EB"
+            TextColor="#FFFFFF"
+            FontSize="18"
+            CornerRadius="20"
+            HeightRequest="50"
+            WidthRequest="250"
+            HorizontalOptions="Center"
+            Command="{Binding LogoutCommand}" />
+
+    </VerticalStackLayout>
+</ContentPage>

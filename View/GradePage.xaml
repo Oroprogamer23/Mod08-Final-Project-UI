@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Mod08.ViewModel"
+             x:Class="Mod08.View.GradePage"
+             Title="GradePage">
+
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20" Spacing="30">
+
+        <!-- Header Section -->
+        <Label 
+            Text="Welcome to Grade Page!"
+            FontSize="26"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            TextColor="#84CC16" />
+
+        <!-- Back Button -->
+        <Button 
+            Text="Back"
+            BackgroundColor="#2563EB"
+            TextColor="#FFFFFF"
+            FontSize="18"
+            CornerRadius="20"
+            HeightRequest="50"
+            WidthRequest="250"
+            HorizontalOptions="Center"
+            Command="{Binding BackCommand}" />
+
+    </VerticalStackLayout>
+</ContentPage>
